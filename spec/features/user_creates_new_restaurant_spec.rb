@@ -7,10 +7,10 @@ feature 'user creates new restaurant', %{
 
   let(:user) { FactoryGirl.create :user }
 
-  # before do
-  #   visit root_path
-  #   sign_in_as user
-  # end
+  before do
+    visit root_path
+    sign_in_as user
+  end
 
   scenario 'fill out new species form' do
     visit new_restaurant_path

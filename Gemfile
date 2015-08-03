@@ -44,3 +44,6 @@ end
 gem "rspec-rails", :group => [:development, :test]
 gem "capybara"
 gem 'devise'
+gem 'faker'
+gem 'factory_girl_rails', "~> 4.0"
+gem 'rails_12factor', group: :production
