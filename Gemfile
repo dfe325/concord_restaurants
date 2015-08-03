@@ -43,3 +43,4 @@ end
 
 gem "rspec-rails", :group => [:development, :test]
 gem "capybara"
+gem 'devise'

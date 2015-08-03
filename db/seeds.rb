@@ -5,3 +5,19 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+restaurants = [
+  ["Helen's Restaurant", "Main Street", "app/assets/images/helens.jpg"],
+  ["Salt Box Kitchen", "Commonwealth Avenue", "app/assets/images/SBK.jpg"],
+  ["Comella", "Main Street", "app/assets/images/comella.jpg"],
+  ["Bondir", "Concord Street", "app/assets/images/bondir.jpg"],
+  ["80 Thoreau", "Concord Street", "app/assets/images/80thoreau.jpg"],
+  ["La Provence", "Thoreau Street", "app/assets/images/laprovence.jpg"],
+  ["Concord Cheese Shop", "Concord Street", "app/assets/images/concordcheesesop.jpg"]
+]
+restaurants.each do |array|
+  Restaurant.create!(
+    name: array[0],
+    scientific_name: array[1],
+    image: File.new(array[2])
+  )
+end
