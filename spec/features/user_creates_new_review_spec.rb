@@ -1,4 +1,6 @@
 require 'rails_helper'
+require 'spec_helper'
+
 
 feature 'user creates new review', %{
   As a user
@@ -9,10 +11,10 @@ feature 'user creates new review', %{
   let!(:user) { FactoryGirl.create :user }
   let!(:restaurant) { FactoryGirl.create :restaurant }
 
-  # before do
-  #   visit root_path
-  #   sign_in_as user
-  # end
+  before do
+    visit root_path
+    sign_in_as user
+  end
 
   scenario 'Submitted correctly with comment and rating' do
     visit restaurant_path(restaurant)

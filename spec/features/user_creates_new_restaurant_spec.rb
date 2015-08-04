@@ -1,11 +1,12 @@
 require 'rails_helper'
+require 'spec_helper'
 
 feature 'user creates new restaurant', %{
   As a user
   I want to create a new restaurant
 } do
 
-  let(:user) { FactoryGirl.create :user }
+  let!(:user) { FactoryGirl.create :user }
 
   before do
     visit root_path

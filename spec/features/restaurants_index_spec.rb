@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'spec_helper'
 
 feature 'user visits home page' do
   scenario 'user visits home page' do
