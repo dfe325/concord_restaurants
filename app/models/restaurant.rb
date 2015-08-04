@@ -5,8 +5,8 @@ class Restaurant < ActiveRecord::Base
   # has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" }
   # validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
-  validates :common_name, presence: true
-  validates :scientific_name, presence: true
+  validates :name, presence: true
+  validates :location, presence: true
 
   # paginates_per 20
 
